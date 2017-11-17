@@ -9,7 +9,6 @@ import static com.codeborne.selenide.Selenide.open;
 public class GooglePageTests {
     @Test
     public void testGoogleSearch() {
-        //-Dbrowser=chrome
         System.setProperty("selenide.browser", "Chrome");
         GoogleSearchPage searchPage = open("http://google.com/", GoogleSearchPage.class);
 
