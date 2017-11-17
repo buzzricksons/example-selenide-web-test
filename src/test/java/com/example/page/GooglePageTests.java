@@ -9,11 +9,14 @@ import static com.codeborne.selenide.Selenide.open;
 public class GooglePageTests {
     @Test
     public void testGoogleSearch() {
+        //-Dbrowser=chrome
+        System.setProperty("selenide.browser", "Chrome");
         GoogleSearchPage searchPage = open("http://google.com/", GoogleSearchPage.class);
 
         GoogleResultsPage resultsPage = searchPage.search("selenide");
 
         resultsPage.results().shouldHave(size(10));
         resultsPage.results().get(0).shouldHave(text("Selenide: concise UI tests in Java"));
+
     }
 }
