@@ -7,6 +7,11 @@ import org.openqa.selenium.support.How;
 
 import static com.codeborne.selenide.Selenide.$;
 
+/**
+ * Page Object for Google Search Result.
+ *
+ * @author HyungCheol Kim
+ */
 public class GoogleResultsPage {
     @FindBy(how = How.CSS, using = "#ires .g")
     public ElementsCollection results;
