@@ -8,12 +8,10 @@ import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 public class GooglePageTests {
-    @Autowired
-    private TestConfig myConfig;
 
     @Test
     public void testGoogleSearch() {
-        System.setProperty("selenide.browser", "Chrome");
+        System.setProperty("selenide.browser", "Chrome");//Set Chrome
         GoogleSearchPage searchPage = open("http://google.com/", GoogleSearchPage.class);
 
         GoogleResultsPage resultsPage = searchPage.search("selenide");
