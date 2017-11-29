@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Data
 @Configuration
-public class TestConfig {
+public class _TestConfig {
 
     @Value("{environment.servers}")
     private String servers;
