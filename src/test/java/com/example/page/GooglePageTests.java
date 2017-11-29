@@ -12,7 +12,6 @@ public class GooglePageTests {
     public void testGoogleSearch() {
         System.setProperty("selenide.browser", "Chrome");//Set Chrome
         GoogleSearchPage searchPage = open("http://google.com/", GoogleSearchPage.class);
-
         GoogleResultsPage resultsPage = searchPage.search("selenide");
 
         resultsPage.results().get(0).shouldHave(text("Selenide: concise UI tests in Java"));
