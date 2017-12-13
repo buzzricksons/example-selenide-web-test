@@ -6,8 +6,6 @@ Using Selenide and Spring boot.
 - [Chrome](https://www.google.com/chrome/browser/desktop/index.html)
 
 # Usage
-Using Chrome Browser.
-
 ## Basic
 ```
 $ mvn clean test
@@ -17,3 +15,8 @@ $ mvn clean test
 ```
 $ mvn clean test -Dchromeoptions.args=headless
 ```
+
+## If test failed
+Screenshot and html file saved in `Git repository/test-result/Date and current time` folder.
+
+- ex) `sample-selenide-web-test\test-result\20171213162334`
