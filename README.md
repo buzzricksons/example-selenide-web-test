@@ -22,4 +22,4 @@ Screenshot and html file saved in `Git repository/test-result/Date and current t
 - ex) `C:/sample-selenide-web-test/test-result/20171213162334`
 
 # Etc
-You can some custom setting at application.yml file.
+You can some custom setting at `application.yml` file.
