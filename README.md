@@ -2,15 +2,18 @@
 Using Selenide and Spring boot.
 - [Selenide](http://selenide.org/)
 - Spring Boot
+- JDK 1.8
+- [Chrome](https://www.google.com/chrome/browser/desktop/index.html)
 
 # Usage
-Chrome Browser used.
+Using Chrome Browser.
+
 ## Basic
-```$xslt
+```
 $ mvn clean test
 ```
 
 ## Headless
-```$xslt
+```
 $ mvn clean test -Dchromeoptions.args=headless
 ```
