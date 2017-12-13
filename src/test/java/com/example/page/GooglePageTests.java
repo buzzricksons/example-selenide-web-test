@@ -20,6 +20,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class GooglePageTests {
     @Value("${setting.browser}")
     String browser;
+
     @Value("${setting.screenshot-folder}")
     String screenshotFolder;
 
