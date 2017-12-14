@@ -23,3 +23,9 @@ Screenshot and html file saved in `Git repository/test-result/Date and current t
 
 # Etc
 You can some custom setting at `application.yml` file.
+```
+setting:
+  browser: Chrome
+  screenshot-folder: test-result/
+
+```
