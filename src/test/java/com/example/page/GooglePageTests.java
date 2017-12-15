@@ -14,10 +14,7 @@ import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 
-@SpringBootTest
-@SpringBootConfiguration
-@RunWith(SpringJUnit4ClassRunner.class)
-public class GooglePageTests {
+public class GooglePageTests extends AbstractTests {
     @Value("${setting.browser}")
     String browser;
 
