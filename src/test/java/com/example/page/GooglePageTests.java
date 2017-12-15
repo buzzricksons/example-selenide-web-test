@@ -29,7 +29,7 @@ public class GooglePageTests {
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
 
-
+        //System is com.codeborne.selenide.Configuration.class
         System.setProperty("selenide.browser", browser);
         System.setProperty("selenide.reportsFolder", screenshotFolder + now.format(formatter));
 
