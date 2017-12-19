@@ -11,9 +11,9 @@ public class GooglePageTests2 extends AbstractTests {
     @Test
     public void testGoogleSearch() {
         GoogleSearchPage searchPage = open("http://google.com/", GoogleSearchPage.class);
-        GoogleResultsPage resultsPage = searchPage.search("selenide");
+        GoogleResultsPage resultsPage = searchPage.search("selenium");
 
-        resultsPage.results().get(0).shouldHave(text("Selenide: concise UI tests in Java"));
+        resultsPage.results().get(0).shouldHave(text("Selenium - Web Browser Automation"));
 
 //        Assert.assertEquals(10, resultsPage.results().size());//If Default JUnit
         resultsPage.results().shouldHave(size(10));
