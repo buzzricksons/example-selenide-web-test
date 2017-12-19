@@ -7,7 +7,17 @@ import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 
+/**
+ * Test for Google Search.
+ *
+ * @author HyungCheol Kim
+ *
+ */
 public class GooglePageTests extends AbstractTests {
+    /**
+     * Test for keyword "selenide".
+     *
+     */
     @Test
     public void testGoogleSearch() {
         GoogleSearchPage searchPage = open("http://google.com/", GoogleSearchPage.class);
