@@ -10,6 +10,13 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Initialization class for all test classes.
+ *
+ * @author HyungCheol Kim
+ * @see resources/application.yml
+ *
+ */
 @SpringBootTest
 @SpringBootConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -22,6 +29,11 @@ public class AbstractTests {
     @Value("${setting.screenshot-folder}")
     String screenshotFolder;
 
+    /**
+     * Initialize before test. This method executed only once.
+     *
+     * @see com.codeborne.selenide.Configuration
+     */
     @Before
     public void initialize() {
         if (initialized) {
@@ -31,7 +43,6 @@ public class AbstractTests {
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
 
-        //System is com.codeborne.selenide.Configuration.class
         System.setProperty("selenide.browser", browser);
         System.setProperty("selenide.reportsFolder", screenshotFolder + now.format(formatter));
 
