@@ -60,5 +60,4 @@ public class AbstractTests {
 
         this.initialized = true;
     }
-
 }
