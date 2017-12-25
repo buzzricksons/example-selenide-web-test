@@ -24,7 +24,6 @@ public class GooglePageTests2 extends AbstractTests {
 
         resultsPage.results().get(0).shouldHave(text("Selenium - Web Browser Automation"));
 
-//        Assert.assertEquals(10, resultsPage.results().size());//If Default JUnit
         resultsPage.results().shouldHave(size(10));
 
     }
