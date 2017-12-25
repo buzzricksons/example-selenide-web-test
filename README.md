@@ -27,5 +27,6 @@ You can some custom setting at `application.yml` file.
 setting:
   browser: Chrome
   screenshot-folder: test-result/
+  headless: true
 
 ```
