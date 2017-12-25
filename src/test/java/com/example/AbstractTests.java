@@ -1,6 +1,5 @@
 package com.example;
 
-import com.codeborne.selenide.Configuration;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Value;
@@ -50,10 +49,6 @@ public class AbstractTests {
         System.setProperty("selenide.browser", browser);
         System.setProperty("selenide.reportsFolder", screenshotFolder + now.format(formatter));
         System.setProperty("selenide.headless", headless);
-
-
-//        ChromeOptions chromeOptions = new ChromeOptions();
-//        chromeOptions.addArguments("headless","disable-gpu");
 
         this.initialized = true;
     }
