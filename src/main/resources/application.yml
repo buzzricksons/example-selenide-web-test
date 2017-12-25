@@ -1,3 +1,4 @@
 setting:
   browser: Chrome
   screenshot-folder: test-result/
+  headless: true
