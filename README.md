@@ -3,7 +3,7 @@ Using Selenide and Spring boot.
 - [Selenide](http://selenide.org/)
 - Spring Boot
 - JDK 1.8
-- [Chrome](https://www.google.com/chrome/browser/desktop/index.html)
+- [Latest Chrome(Headless mode included)](https://www.google.com/chrome/browser/desktop/index.html)
 
 # Usage
 ## Basic
