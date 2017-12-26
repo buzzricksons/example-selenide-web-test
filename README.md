@@ -12,8 +12,15 @@ $ mvn clean test
 ```
 
 ## Headless
+### If using maven
 ```
 $ mvn clean test -Dchromeoptions.args=headless
+```
+
+### If using java source
+edit `application.yml`
+```
+  headless: true
 ```
 
 # If test failed
