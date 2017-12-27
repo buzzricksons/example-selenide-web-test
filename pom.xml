@@ -62,7 +62,8 @@
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
-            <version>4.9</version>
+            <!--<version>4.9</version>-->
+            <version>4.7.1</version>
             <!--<scope>test</scope>-->
         </dependency>
         <dependency>
