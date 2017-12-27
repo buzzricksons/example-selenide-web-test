@@ -1,10 +1,8 @@
 package com.example.page;
 
 import com.codeborne.selenide.ElementsCollection;
-import com.codeborne.selenide.SelenideElement;
 import com.example.AbstractTests;
 import org.junit.Test;
-import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.text;
