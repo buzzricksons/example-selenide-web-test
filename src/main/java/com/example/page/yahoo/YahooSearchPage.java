@@ -1,4 +1,4 @@
-package com.example.page;
+package com.example.page.yahoo;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;

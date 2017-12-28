@@ -1,6 +1,8 @@
 package com.example.page;
 
 import com.example.AbstractTests;
+import com.example.page.google.GoogleResultsPage;
+import com.example.page.google.GoogleSearchPage;
 import org.junit.Test;
 
 import static com.codeborne.selenide.CollectionCondition.size;

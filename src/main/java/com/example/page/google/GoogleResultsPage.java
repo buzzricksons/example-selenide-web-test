@@ -1,4 +1,4 @@
-package com.example.page;
+package com.example.page.google;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
@@ -8,12 +8,12 @@ import org.openqa.selenium.support.How;
 import static com.codeborne.selenide.Selenide.$;
 
 /**
- * Page Object for Yahoo.co.jp Search Result.
+ * Page Object for Google Search Result.
  *
  * @author HyungCheol Kim
  */
-public class YahooResultsPage {
-    @FindBy(how = How.CSS, using = "#WS2m .w")
+public class GoogleResultsPage {
+    @FindBy(how = How.CSS, using = "#ires .g")
     public ElementsCollection results;
 
     public ElementsCollection results() {
@@ -21,6 +21,6 @@ public class YahooResultsPage {
     }
 
     public SelenideElement getResult(int index) {
-        return $("#WS2m .w", index);
+        return $("#ires .g", index);
     }
 }
