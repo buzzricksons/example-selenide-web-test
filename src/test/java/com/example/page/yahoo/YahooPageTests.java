@@ -1,4 +1,4 @@
-package com.example.page;
+package com.example.page.yahoo;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.example.AbstractTests;

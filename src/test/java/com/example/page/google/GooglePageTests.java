@@ -1,4 +1,4 @@
-package com.example.page;
+package com.example.page.google;
 
 import com.example.AbstractTests;
 import com.example.page.google.GoogleResultsPage;
