@@ -48,7 +48,7 @@ public class AbstractTests {
 
         System.setProperty("selenide.browser", browser);
         System.setProperty("selenide.reportsFolder", screenshotFolder + now.format(formatter));
-        System.setProperty("selenide.headless", headless);
+//        System.setProperty("selenide.headless", headless);
 
         this.initialized = true;
     }
