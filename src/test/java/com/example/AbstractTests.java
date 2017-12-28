@@ -2,6 +2,7 @@ package com.example;
 
 import org.junit.Before;
 import org.junit.Ignore;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringBootConfiguration;
@@ -21,7 +22,7 @@ import java.time.format.DateTimeFormatter;
 @SpringBootTest
 @SpringBootConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
-@Ignore
+//@Ignore
 public class AbstractTests {
     private static boolean initialized = false;
 
@@ -53,5 +54,9 @@ public class AbstractTests {
 //        System.setProperty("selenide.headless", headless);
 
         this.initialized = true;
+    }
+    @Test
+    public void ignoredTestMethod() {
+        //avoid for java.lang.Exception: No runnable methods
     }
 }
