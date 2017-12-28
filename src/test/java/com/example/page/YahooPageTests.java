@@ -9,26 +9,26 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 
 /**
- * Test for Google Search.
+ * Test for Yahoo.co.jp Search.
  *
  * @author HyungCheol Kim
  *
  */
-public class GooglePageTests3 extends AbstractTests {
+public class YahooPageTests extends AbstractTests {
     /**
      * Test for keyword "selenide".
      *
      */
     @Test
-    public void testGoogleSearch() {
-        GoogleSearchPage searchPage = open("http://google.co.jp/", GoogleSearchPage.class);
-        GoogleResultsPage resultsPage = searchPage.search("selenide");
+    public void testYahooSearch() {
+        YahooSearchPage searchPage = open("http://yahoo.co.jp/", YahooSearchPage.class);
+        YahooResultsPage resultsPage = searchPage.search("selenide");
 
         ElementsCollection result = resultsPage.results();
 
         result.get(0).shouldHave(text("Selenide: concise UI tests in Java"));
-        result.get(1).shouldHave(text("Selenide入門 - Qiita"));
-        result.get(1).$$(".rc a").get(0).shouldHave(text("Selenide入門 - Qiita"));
+        result.get(1).shouldHave(text("Selenide～Javaで超簡単・簡潔にUIテストを書く～ - Qiita"));
+        result.get(1).$$(".hd a").get(0).shouldHave(text("Selenide～Javaで超簡単・簡潔にUIテストを書く～ - Qiita"));
         result.shouldHave(size(10));
 
         System.out.println("--------------------------------------------------------------------------------------");
