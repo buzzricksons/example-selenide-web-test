@@ -2,8 +2,6 @@ package com.example.page.yahoo;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.example.AbstractTests;
-import com.example.page.yahoo.YahooResultsPage;
-import com.example.page.yahoo.YahooSearchPage;
 import org.junit.Test;
 
 import static com.codeborne.selenide.CollectionCondition.size;
