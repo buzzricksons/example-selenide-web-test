@@ -1,9 +1,8 @@
 package com.example.page.google;
 
-import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
+import org.openqa.selenium.By;
 
+import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.page;
 /**
  * Page Object for Google Search.
@@ -11,11 +10,12 @@ import static com.codeborne.selenide.Selenide.page;
  * @author HyungCheol Kim
  */
 public class GoogleSearchPage {
-    @FindBy(how = How.NAME, using = "q")
-    private SelenideElement searchBox;
+//    @FindBy(how = How.NAME, using = "q")
+//    private SelenideElement searchBox;
 
-    public GoogleResultsPage search(String query) {
-        searchBox.setValue(query).pressEnter();
+    public GoogleResultsPage search(String searchKeyword) {
+//        searchBox.setValue(query).pressEnter();
+        $(By.name("q")).val(searchKeyword).pressEnter();
         return page(GoogleResultsPage.class);
     }
 }

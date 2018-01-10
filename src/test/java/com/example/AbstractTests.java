@@ -30,8 +30,8 @@ public class AbstractTests {
     @Value("${setting.screenshot-folder}")
     String screenshotFolder;
 
-    @Value("${setting.headless}")
-    String headless;
+    @Value("${setting.isHeadless}")
+    String isHeadless;
 
     /**
      * Initialize before test. This method executed only once.
@@ -49,7 +49,7 @@ public class AbstractTests {
 
         System.setProperty("selenide.browser", browser);
         System.setProperty("selenide.reportsFolder", screenshotFolder + now.format(formatter));
-//        System.setProperty("selenide.headless", headless);
+        System.setProperty("selenide.isHeadless", isHeadless);
 
         this.initialized = true;
     }

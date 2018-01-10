@@ -26,9 +26,10 @@ public class YahooPageTests extends AbstractTests {
 
         ElementsCollection result = resultsPage.results();
 
-        result.get(0).shouldHave(text("Selenide: concise UI tests in Java"));
-        result.get(1).shouldHave(text("Selenide～Javaで超簡単・簡潔にUIテストを書く～ - Qiita"));
-        result.get(1).$$(".hd a").get(0).shouldHave(text("Selenide～Javaで超簡単・簡潔にUIテストを書く～ - Qiita"));
+        result.get(0).shouldHave(text("Selenide～Javaで超簡単・簡潔にUIテストを書く～ - Qiita"));
+        result.get(0).$$(".hd a").get(0).shouldHave(text("Selenide～Javaで超簡単・簡潔にUIテストを書く～ - Qiita"));
+        result.get(1).shouldHave(text("Selenide入門 - Qiita"));
+        result.get(2).shouldHave(text("Selenide: concise UI tests in Java"));
         result.shouldHave(size(10));
 
         System.out.println("--------------------------------------------------------------------------------------");
