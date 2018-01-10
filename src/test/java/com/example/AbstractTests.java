@@ -49,7 +49,7 @@ public class AbstractTests {
 
         System.setProperty("selenide.browser", browser);
         System.setProperty("selenide.reportsFolder", screenshotFolder + now.format(formatter));
-        System.setProperty("selenide.isHeadless", isHeadless);
+//        System.setProperty("selenide.isHeadless", isHeadless);//Not supported in Selenide 4.7.1
 
         this.initialized = true;
     }
