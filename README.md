@@ -1,4 +1,4 @@
-# Sample for Selenide web test
+# Example for Selenide web test
 Using Selenide and Spring boot.
 - [Selenide](http://selenide.org/)
 - Spring Boot
