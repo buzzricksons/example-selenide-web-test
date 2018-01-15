@@ -17,8 +17,8 @@ $ mvn clean test
 $ mvn clean test -Dchromeoptions.args=headless
 ```
 
-### If using java source
-edit `application.yml`
+### If using java source(Not yet supported)
+edit`application.yml`
 ```
   headless: true
 ```
@@ -34,6 +34,7 @@ You can some custom setting at `application.yml` file.
 setting:
   browser: Chrome
   screenshot-folder: test-result/
-  headless: true
+  #↓Not yet supported
+  #headless: true
 
 ```
