@@ -14,7 +14,6 @@ public class GoogleSearchPage {
 //    private SelenideElement searchBox;
 
     public GoogleResultsPage search(String searchKeyword) {
-//        searchBox.setValue(query).pressEnter();
         $(By.name("q")).val(searchKeyword).pressEnter();
         return page(GoogleResultsPage.class);
     }

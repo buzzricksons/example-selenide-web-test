@@ -2,10 +2,9 @@ package com.example.page.google;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 
 /**
  * Page Object for Google Search Result.
@@ -13,11 +12,8 @@ import static com.codeborne.selenide.Selenide.$;
  * @author HyungCheol Kim
  */
 public class GoogleResultsPage {
-    @FindBy(how = How.CSS, using = "#ires .g")
-    public ElementsCollection results;
-
     public ElementsCollection results() {
-        return results;
+        return $$("#ires .g");
     }
 
     public SelenideElement getResult(int index) {

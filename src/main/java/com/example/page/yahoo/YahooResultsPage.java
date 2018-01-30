@@ -2,10 +2,9 @@ package com.example.page.yahoo;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 
 /**
  * Page Object for Yahoo.co.jp Search Result.
@@ -13,11 +12,8 @@ import static com.codeborne.selenide.Selenide.$;
  * @author HyungCheol Kim
  */
 public class YahooResultsPage {
-    @FindBy(how = How.CSS, using = "#WS2m .w")
-    public ElementsCollection results;
-
     public ElementsCollection results() {
-        return results;
+        return $$("#WS2m .w");
     }
 
     public SelenideElement getResult(int index) {
