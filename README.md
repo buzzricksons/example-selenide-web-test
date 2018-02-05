@@ -4,6 +4,7 @@ Using Selenide and Spring boot.
 - Spring Boot
 - JDK 1.8
 - [Latest Chrome(Headless mode included)](https://www.google.com/chrome/browser/desktop/index.html)
+- travis CI
 
 # Usage
 ## Basic
