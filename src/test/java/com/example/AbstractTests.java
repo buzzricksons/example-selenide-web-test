@@ -3,7 +3,7 @@ package com.example;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -22,14 +22,8 @@ import java.time.format.DateTimeFormatter;
 public class AbstractTests {
     private static boolean initialized = false;
 
-    @Value("${setting.browser}")
-    String browser;
-
-    @Value("${setting.screenshot-folder}")
-    String screenshotFolder;
-
-    @Value("${setting.isHeadless}")
-    String isHeadless;
+    @Autowired
+    private Settings settings;
 
     /**
      * Initialize before test. This method executed only once.
@@ -45,8 +39,8 @@ public class AbstractTests {
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
 
-        System.setProperty("selenide.browser", browser);
-        System.setProperty("selenide.reportsFolder", screenshotFolder + now.format(formatter));
+        System.setProperty("selenide.browser", settings.getBrowser());
+        System.setProperty("selenide.reportsFolder", settings.getScreenshotFolder() + now.format(formatter));
 //        System.setProperty("selenide.isHeadless", isHeadless);//Not supported in Selenide 4.7.1
 
         this.initialized = true;

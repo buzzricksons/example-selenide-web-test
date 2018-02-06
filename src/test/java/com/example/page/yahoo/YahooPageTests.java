@@ -2,7 +2,9 @@ package com.example.page.yahoo;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.example.AbstractTests;
+import com.example.Settings;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.text;
@@ -15,13 +17,16 @@ import static com.codeborne.selenide.Selenide.open;
  *
  */
 public class YahooPageTests extends AbstractTests {
+    @Autowired
+    private Settings settings;
+
     /**
      * Test for keyword "selenide".
      *
      */
     @Test
     public void testYahooSearch() {
-        YahooSearchPage searchPage = open("http://yahoo.co.jp/", YahooSearchPage.class);
+        YahooSearchPage searchPage = open(settings.getPage2(), YahooSearchPage.class);
         YahooResultsPage resultsPage = searchPage.search("selenide");
 
         ElementsCollection result = resultsPage.results();

@@ -2,3 +2,7 @@ setting:
   browser: Chrome
   screenshot-folder: test-result/
   isHeadless: true
+
+default:
+  page1: http://google.com/
+  page2: http://yahoo.co.jp/
