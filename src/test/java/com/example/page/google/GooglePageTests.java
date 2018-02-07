@@ -25,7 +25,7 @@ public class GooglePageTests extends AbstractTests {
      */
     @Test
     public void testGoogleSearch() {
-        GoogleSearchPage searchPage = open(settings.getPage1(), GoogleSearchPage.class);
+        GoogleSearchPage searchPage = open(settings.getGooglePage(), GoogleSearchPage.class);
         GoogleResultsPage resultsPage = searchPage.search("selenide");
 
         resultsPage.results().get(0).shouldHave(text("Selenide: concise UI tests in Java"));

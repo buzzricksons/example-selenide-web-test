@@ -7,11 +7,11 @@ import org.springframework.stereotype.Component;
 @Data
 @Component
 public class Settings {
-    @Value("${default.page1}")
-    private String page1;
+    @Value("${default.googlePage}")
+    private String googlePage;
 
-    @Value("${default.page2}")
-    private String page2;
+    @Value("${default.yahooPage}")
+    private String yahooPage;
 
     @Value("${setting.browser}")
     private String browser;
