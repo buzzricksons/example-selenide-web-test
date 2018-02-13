@@ -6,6 +6,11 @@ Using Selenide and Spring boot.
 - [Latest Chrome(Headless mode included)](https://www.google.com/chrome/browser/desktop/index.html)
 - travis CI
 
+## Test case
+- Google Search test
+- Yahoo Search test
+- Naver Search test
+
 # Usage
 ## Basic
 ```
