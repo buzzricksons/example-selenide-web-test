@@ -3,12 +3,9 @@ package com.example.page.naver;
 import com.codeborne.selenide.ElementsCollection;
 import com.example.AbstractTests;
 import com.example.Settings;
-import com.example.page.yahoo.YahooResultsPage;
-import com.example.page.yahoo.YahooSearchPage;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 

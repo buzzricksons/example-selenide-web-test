@@ -1,6 +1,5 @@
 package com.example.page.naver;
 
-import com.example.page.yahoo.YahooResultsPage;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
