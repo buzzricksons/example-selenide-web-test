@@ -35,7 +35,7 @@ Screenshot and html file saved in `Git repository/test-result/Date and current t
 - ex) `C:/sample-selenide-web-test/test-result/20171213162334`
 
 # Etc
-You can some custom setting at `application.yml` file.
+## You can some custom setting at `application.yml` file.
 ```
 setting:
   browser: Chrome
@@ -43,4 +43,10 @@ setting:
   #↓Not yet supported
   #headless: true
 
+```
+
+## You can test headless chrome at travis CI
+See below setting file.
+```
+https://github.com/buzzricksons/example-selenide-web-test/blob/master/.travis.yml
 ```
