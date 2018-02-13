@@ -13,6 +13,9 @@ public class Settings {
     @Value("${default.yahooPage}")
     private String yahooPage;
 
+    @Value("${default.naverPage}")
+    private String naverPage;
+
     @Value("${setting.browser}")
     private String browser;
 

@@ -6,3 +6,4 @@ setting:
 default:
   googlePage: http://google.com/
   yahooPage: http://yahoo.co.jp/
+  naverPage: http://naver.com/

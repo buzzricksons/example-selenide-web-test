@@ -16,7 +16,7 @@ public class GoogleResultsPage {
         return $$("#ires .g");
     }
 
-    public SelenideElement getResult(int index) {
-        return $("#ires .g", index);
+    public SelenideElement getResultBy(int index) {
+        return $$("#ires .g").get(index);
     }
 }

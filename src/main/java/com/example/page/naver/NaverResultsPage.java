@@ -1,4 +1,4 @@
-package com.example.page.yahoo;
+package com.example.page.naver;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
@@ -7,16 +7,16 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 /**
- * Page Object for Yahoo.co.jp Search Result.
+ * Page Object for Naver.com Search Result.
  *
  * @author HyungCheol Kim
  */
-public class YahooResultsPage {
+public class NaverResultsPage {
     public ElementsCollection results() {
-        return $$("#WS2m .w");
+        return $$(".main_pack");
     }
 
     public SelenideElement getResultBy(int index) {
-        return $$("#WS2m .w").get(index);
+        return $$(".main_pack").get(index);
     }
 }
