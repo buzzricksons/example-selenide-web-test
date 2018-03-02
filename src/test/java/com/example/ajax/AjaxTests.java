@@ -15,5 +15,7 @@ public class AjaxTests extends AbstractTests {
      */
     @Test
     public void testAjax() {
+        //https://codepen.io/btholt/pen/FArdh
+
     }
 }

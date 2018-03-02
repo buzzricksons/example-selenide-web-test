@@ -3,7 +3,10 @@ setting:
   screenshot-folder: test-result/
   isHeadless: true
 
-default:
+search:
   googlePage: http://google.com/
   yahooPage: http://yahoo.co.jp/
   naverPage: http://naver.com/
+
+ajax:
+  examplePage1: https://codepen.io/btholt/pen/FArdh
