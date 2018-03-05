@@ -1,6 +1,5 @@
 package com.example.page.naver;
 
-import com.codeborne.selenide.ElementsCollection;
 import com.example.AbstractTests;
 import com.example.Settings;
 import org.junit.Test;
