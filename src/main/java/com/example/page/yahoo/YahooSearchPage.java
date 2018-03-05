@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.page;
  * @author HyungCheol Kim
  */
 public class YahooSearchPage {
-    public YahooResultsPage search(String searchKeyword) {
+    public YahooResultsPage keywordSearchBy(String searchKeyword) {
         $(By.name("p")).val(searchKeyword).pressEnter();
         return page(YahooResultsPage.class);
     }

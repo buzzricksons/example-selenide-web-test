@@ -2,6 +2,8 @@ package com.example.page.naver;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import lombok.RequiredArgsConstructor;
+import lombok.Value;
 
 import static com.codeborne.selenide.Selenide.$$;
 
@@ -13,9 +15,5 @@ import static com.codeborne.selenide.Selenide.$$;
 public class NaverResultsPage {
     public ElementsCollection results() {
         return $$(".main_pack");
-    }
-
-    public SelenideElement getResultBy(int index) {
-        return $$(".main_pack").get(index);
     }
 }

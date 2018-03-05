@@ -10,8 +10,8 @@ import static com.codeborne.selenide.Selenide.page;
  * @author HyungCheol Kim
  */
 public class GoogleSearchPage {
-    public GoogleResultsPage search(String searchKeyword) {
-        $(By.name("q")).val(searchKeyword).pressEnter();
+    public GoogleResultsPage keywordSearchBy(String keyword) {
+        $(By.name("q")).val(keyword).pressEnter();
         return page(GoogleResultsPage.class);
     }
 }

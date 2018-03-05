@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.page;
  * @author HyungCheol Kim
  */
 public class NaverSearchPage {
-    public NaverResultsPage search(String searchKeyword) {
+    public NaverResultsPage keywordSearchBy(String searchKeyword) {
         $(By.name("query")).val(searchKeyword).pressEnter();
         return page(NaverResultsPage.class);
     }

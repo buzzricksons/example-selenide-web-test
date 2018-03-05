@@ -15,8 +15,4 @@ public class YahooResultsPage {
     public ElementsCollection results() {
         return $$("#WS2m .w");
     }
-
-    public SelenideElement getResultBy(int index) {
-        return $$("#WS2m .w").get(index);
-    }
 }
