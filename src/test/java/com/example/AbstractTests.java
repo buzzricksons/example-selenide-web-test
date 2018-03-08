@@ -54,9 +54,9 @@ public class AbstractTests {
      * Set time interval at every test classes.
      */
     @AfterClass
-    public void setTimeInterval() {
+    public static void setTimeInterval() {
         try {
-            TimeUnit.SECONDS.sleep(Long.valueOf(settings.getTimeInterval()));
+            TimeUnit.SECONDS.sleep(Long.valueOf(1));
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
