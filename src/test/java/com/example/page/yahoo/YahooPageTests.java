@@ -17,16 +17,13 @@ import static com.codeborne.selenide.Selenide.open;
  *
  */
 public class YahooPageTests extends AbstractTests {
-    @Autowired
-    private Settings settings;
-
     /**
      * Test for keyword "selenide".
      *
      */
     @Test
     public void testYahooSearch() {
-        YahooSearchPage searchPage = open(settings.getYahooPage(), YahooSearchPage.class);
+        YahooSearchPage searchPage = open(getSettings().getYahooPage(), YahooSearchPage.class);
         YahooResultsPage resultsPage = searchPage.keywordSearchBy("selenide");
 
         ElementsCollection result = resultsPage.results();

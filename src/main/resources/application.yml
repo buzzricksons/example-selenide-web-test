@@ -2,6 +2,7 @@ setting:
   browser: Chrome
   screenshot-folder: test-result/
   isHeadless: true
+  timeInterval: 1
 
 search:
   googlePage: http://google.com/
@@ -10,3 +11,4 @@ search:
 
 ajax:
   examplePage1: https://codepen.io/btholt/pen/FArdh
+  examplePage2: http://localhost:11080/time/top

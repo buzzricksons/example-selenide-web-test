@@ -15,16 +15,13 @@ import static com.codeborne.selenide.Selenide.open;
  *
  */
 public class NaverPageTests extends AbstractTests {
-    @Autowired
-    private Settings settings;
-
     /**
      * Test for keyword "selenide".
      *
      */
     @Test
     public void testNaverSearch() {
-        NaverSearchPage searchPage = open(settings.getNaverPage(), NaverSearchPage.class);
+        NaverSearchPage searchPage = open(getSettings().getNaverPage(), NaverSearchPage.class);
         NaverResultsPage resultsPage = searchPage.keywordSearchBy("selenide");
 
         resultsPage.results().get(0).find(".dic_dsc").shouldHave(text("selenide 예문보기\n" +

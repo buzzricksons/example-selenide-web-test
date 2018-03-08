@@ -1,6 +1,9 @@
 package com.example;
 
+import lombok.Getter;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Initialization class for all test classes.
@@ -22,6 +26,7 @@ import java.time.format.DateTimeFormatter;
 public class AbstractTests {
     private static boolean initialized = false;
 
+    @Getter
     @Autowired
     private Settings settings;
 
@@ -45,6 +50,19 @@ public class AbstractTests {
 
         this.initialized = true;
     }
+
+    /**
+     * Set time interval at every test classes.
+     */
+    @AfterClass
+    public void setTimeInterval() {
+        try {
+            TimeUnit.SECONDS.sleep(Long.valueOf(settings.getTimeInterval()));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
     @Test
     public void ignoredTestMethod() {
         //avoid for java.lang.Exception: No runnable methods

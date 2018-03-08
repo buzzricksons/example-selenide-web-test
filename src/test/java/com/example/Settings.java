@@ -15,6 +15,9 @@ public class Settings {
     @Value("${setting.isHeadless}")
     private String isHeadless;
 
+    @Value("${setting.timeInterval}")
+    private String timeInterval;
+
     @Value("${search.googlePage}")
     private String googlePage;
 
@@ -28,5 +31,8 @@ public class Settings {
     private String browser;
 
     @Value("${ajax.examplePage1}")
-    private String examplePage1;
+    private String ajaxExamplePage1;
+
+    @Value("${ajax.examplePage2}")
+    private String ajaxExamplePage2;
 }
