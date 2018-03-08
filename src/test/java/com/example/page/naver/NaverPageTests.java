@@ -1,9 +1,7 @@
 package com.example.page.naver;
 
 import com.example.AbstractTests;
-import com.example.Settings;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;

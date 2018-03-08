@@ -7,7 +7,8 @@ import org.openqa.selenium.By;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 /**
  * Test for Example Search.

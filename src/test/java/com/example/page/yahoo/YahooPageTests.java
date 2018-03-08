@@ -2,9 +2,7 @@ package com.example.page.yahoo;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.example.AbstractTests;
-import com.example.Settings;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.text;
