@@ -1,7 +1,6 @@
 package com.example.ajax;
 
 import com.example.AbstractTests;
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
@@ -21,7 +20,5 @@ public class AjaxTests extends AbstractTests {
         $("#button1").click();
 
         $("#test1").shouldHave(text("3 seconds later"));
-
-
     }
 }

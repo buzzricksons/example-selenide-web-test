@@ -8,11 +8,8 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 /**
  * Test for Example Search.
@@ -32,6 +29,7 @@ public class ExamplePageTests extends AbstractTests {
     public void testExampleSearchByBasic() {
         open(settings.getGooglePage());
         $(By.name("q")).val("selenide").pressEnter();
+
         $("#ires .g").shouldHave(text("Selenide: concise UI tests in Java"));
         $$("#ires .g").shouldHaveSize(10);
     }
@@ -44,6 +42,7 @@ public class ExamplePageTests extends AbstractTests {
     public void testExampleSearchByPOMPattern() {
         GoogleSearchPage searchPage = open(settings.getGooglePage(), GoogleSearchPage.class);
         GoogleResultsPage resultsPage = searchPage.keywordSearchBy("selenide");
+
         resultsPage.results().get(0).shouldHave(text("Selenide: concise UI tests in Java"));
         resultsPage.results().shouldHaveSize(10);
     }

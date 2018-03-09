@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * Ajaxテスト用のウェブアプリケーションです。
+ * App for Ajax test
  *
  * @author HyungCheol Kim
  */
@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ExamWebAppController {
     /**
-     * {@code /top}リクエストに対する処理を行います。
+     * execute for {@code /top} request
      *
-     * @return テンプレート名
+     * @return thymeleaf template name
      */
     @GetMapping("/top")
     public String top() {

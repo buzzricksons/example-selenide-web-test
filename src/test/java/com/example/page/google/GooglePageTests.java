@@ -5,7 +5,6 @@ import com.example.Settings;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -29,8 +28,6 @@ public class GooglePageTests extends AbstractTests {
         GoogleResultsPage resultsPage = searchPage.keywordSearchBy("selenide");
 
         resultsPage.results().get(0).shouldHave(text("Selenide: concise UI tests in Java"));
-
-//        Assert.assertEquals(10, resultsPage.results().size());//If Default JUnit
-        resultsPage.results().shouldHaveSize(10);
+        resultsPage.results().shouldHaveSize(10);//Assert.assertEquals(10, resultsPage.results().size());
     }
 }
