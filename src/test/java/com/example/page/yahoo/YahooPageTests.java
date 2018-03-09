@@ -27,7 +27,6 @@ public class YahooPageTests extends AbstractTests {
         ElementsCollection result = resultsPage.results();
 
         result.get(0).shouldHave(text("Selenide～Javaで超簡単・簡潔にUIテストを書く～ - Qiita"));
-        result.get(0).$(".hd a").shouldHave(text("Selenide～Javaで超簡単・簡潔にUIテストを書く～ - Qiita"));
-        result.shouldHave(size(10));
+        result.shouldHaveSize(10);
     }
 }
