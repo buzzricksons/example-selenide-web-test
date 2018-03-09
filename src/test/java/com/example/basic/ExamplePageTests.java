@@ -25,7 +25,7 @@ public class ExamplePageTests extends AbstractTests {
     private Settings settings;
 
     /**
-     * Test for keyword "selenide".
+     * Test for keyword "selenide" by basic pattern.
      *
      */
     @Test
@@ -36,8 +36,12 @@ public class ExamplePageTests extends AbstractTests {
         $$("#ires .g").shouldHaveSize(10);
     }
 
+    /**
+     * Test for keyword "selenide" by Page Object Model pattern.
+     *
+     */
     @Test
-    public void testExampleSearchByPagePattern() {
+    public void testExampleSearchByPOMPattern() {
         GoogleSearchPage searchPage = open(settings.getGooglePage(), GoogleSearchPage.class);
         GoogleResultsPage resultsPage = searchPage.keywordSearchBy("selenide");
         resultsPage.results().get(0).shouldHave(text("Selenide: concise UI tests in Java"));

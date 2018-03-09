@@ -32,7 +32,4 @@ public class Settings {
 
     @Value("${ajax.examplePage1}")
     private String ajaxExamplePage1;
-
-    @Value("${ajax.examplePage2}")
-    private String ajaxExamplePage2;
 }

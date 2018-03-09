@@ -13,5 +13,4 @@ search:
   naverPage: http://naver.com/
 
 ajax:
-  examplePage1: https://codepen.io/btholt/pen/FArdh
-  examplePage2: http://localhost:11080/time/top
+  examplePage1: http://localhost:11080/time/top

@@ -4,9 +4,10 @@ Using Selenide and Spring boot.
 - Spring Boot
 - JDK 1.8
 - [Latest Chrome(Headless mode included)](https://www.google.com/chrome/browser/desktop/index.html)
-- travis CI
+- Travis CI
 
 ## Test case
+- Ajax test(example web app included.)
 - Google Search test
 - Yahoo Search test
 - Naver Search test
@@ -40,12 +41,12 @@ Screenshot and html file saved in `Git repository/test-result/Date and current t
 setting:
   browser: Chrome
   screenshot-folder: test-result/
-  #↓Not yet supported
-  #headless: true
+  isHeadless: true
+  timeInterval: 1
 
 ```
 
-## You can test headless chrome at travis CI
+## You can test headless chrome at Travis CI
 See below setting file.
 ```
 https://github.com/buzzricksons/example-selenide-web-test/blob/master/.travis.yml

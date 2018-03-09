@@ -16,7 +16,7 @@ public class AjaxTests extends AbstractTests {
      */
     @Test
     public void testAjax() {
-        open(getSettings().getAjaxExamplePage2());
+        open(getSettings().getAjaxExamplePage1());
         $(By.name("time")).setValue("3");
         $("#button1").click();
 
