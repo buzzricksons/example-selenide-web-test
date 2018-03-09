@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
  * @see resources/application.yml
  *
  */
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @RunWith(SpringJUnit4ClassRunner.class)
 public class AbstractTests {
     private static boolean initialized = false;

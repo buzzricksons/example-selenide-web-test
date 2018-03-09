@@ -1,3 +1,6 @@
+server:
+  port: 11080
+
 setting:
   browser: Chrome
   screenshot-folder: test-result/

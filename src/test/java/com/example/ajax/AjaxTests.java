@@ -1,6 +1,7 @@
 package com.example.ajax;
 
 import com.example.AbstractTests;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
@@ -15,7 +16,6 @@ public class AjaxTests extends AbstractTests {
      */
     @Test
     public void testAjax() {
-        //https://codepen.io/btholt/pen/FArdh
         open(getSettings().getAjaxExamplePage2());
         $(By.name("time")).setValue("3");
         $("#button1").click();
