@@ -8,7 +8,7 @@ setting:
   timeInterval: 1
 
 search:
-  googlePage: http://google.com/
+  googlePage: http://google.co.jp/
   yahooPage: http://yahoo.co.jp/
   naverPage: http://naver.com/
 

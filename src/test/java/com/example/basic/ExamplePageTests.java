@@ -9,6 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -29,8 +31,21 @@ public class ExamplePageTests extends AbstractTests {
      */
     @Test
     public void seleniumBasicPattern() {
-        System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        final ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.setBinary("/path/to/google-chrome-stable");
+        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--disable-gpu");
+
+        final DesiredCapabilities dc = new DesiredCapabilities();
+        dc.setJavascriptEnabled(true);
+        dc.setCapability(
+                ChromeOptions.CAPABILITY, chromeOptions
+        );
+
+
+//        System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
+
+        WebDriver driver = new ChromeDriver(dc);
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
         driver.get("http://www.google.co.jp");
         WebElement element = driver.findElement(By.name("q"));
