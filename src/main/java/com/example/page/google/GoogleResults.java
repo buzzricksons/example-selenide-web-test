@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$$;
  *
  * @author HyungCheol Kim
  */
-public class GoogleResultsPage {
+public class GoogleResults {
     private final ElementsCollection result = $$("#ires .g");
     public ElementsCollection result() {
         return result;

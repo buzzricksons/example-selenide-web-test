@@ -24,8 +24,8 @@ public class GooglePageTests extends AbstractTests {
      */
     @Test
     public void testGoogleSearch() {
-        GoogleSearchPage searchPage = open(settings.getGooglePage(), GoogleSearchPage.class);
-        GoogleResultsPage resultsPage = searchPage.keywordSearchBy("selenide");
+        GoogleSearch searchPage = open(settings.getGooglePage(), GoogleSearch.class);
+        GoogleResults resultsPage = searchPage.keywordSearchBy("selenide");
 
         resultsPage.firstSectionText().shouldBe(text("Selenide: concise UI tests in Java"));
         resultsPage.result().shouldHaveSize(10);

@@ -1,23 +1,24 @@
-package com.example.page.yahoo;
+package com.example.page.naver;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import lombok.RequiredArgsConstructor;
+import lombok.Value;
 
-import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 /**
- * Page Object for Yahoo.co.jp Search Result.
+ * Page Object for Naver.com Search Result.
  *
  * @author HyungCheol Kim
  */
-public class YahooResultsPage {
-    private final ElementsCollection result = $$("#WS2m .w");
+public class NaverResults {
+    private final ElementsCollection result = $$(".main_pack");
     public ElementsCollection result() {
         return result;
     }
 
     public SelenideElement firstResultSectionText() {
-        return result.get(0);
+        return result.get(0).find(".dic_dsc");
     }
 }

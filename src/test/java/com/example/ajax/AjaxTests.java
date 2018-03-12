@@ -13,16 +13,16 @@ public class AjaxTests extends AbstractTests {
     private Settings settings;
 
     /**
-     * Test for Ajax.
+     * Test for Ajax Example.
      *
      */
     @Test
     public void testAjax() {
-        AjaxSearchPage searchPage = open(settings.getAjaxExamplePage1(), AjaxSearchPage.class);
-        AjaxResultPage resultPage = searchPage.searchBy(settings.getTime());
+        AjaxSearch searchPage = open(settings.getAjaxExamplePage1(), AjaxSearch.class);
+        AjaxResult resultPage = searchPage.searchBy(settings.getTime());
 
-        resultPage.timeText().shouldBe(appear);
-        resultPage.timeText().shouldBe(text("3 seconds later"));
+        resultPage.timeResult().shouldBe(appear);
+        resultPage.timeResult().shouldBe(text("3 seconds later"));
         resultPage.inputTimeText().shouldBe(disappear);
     }
 }

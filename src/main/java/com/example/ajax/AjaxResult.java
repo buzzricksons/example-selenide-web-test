@@ -5,13 +5,13 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class AjaxResultPage {
+public class AjaxResult {
     private final SelenideElement results = $(".result1");
     public SelenideElement results() {
         return results;
     }
 
-    public SelenideElement timeText() {
+    public SelenideElement timeResult() {
         return results.$("#result-time");
     }
 
