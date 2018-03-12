@@ -29,23 +29,10 @@ public class ExamplePageTests extends AbstractTests {
      * Test for keyword "selenide" by Selenium Basic pattern.
      *
      */
-    @Test
+//    @Test
     public void seleniumBasicPattern() {
-        final ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.setBinary("/path/to/google-chrome-stable");
-        chromeOptions.addArguments("--headless");
-        chromeOptions.addArguments("--disable-gpu");
-
-        final DesiredCapabilities dc = new DesiredCapabilities();
-        dc.setJavascriptEnabled(true);
-        dc.setCapability(
-                ChromeOptions.CAPABILITY, chromeOptions
-        );
-
-
-//        System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
-
-        WebDriver driver = new ChromeDriver(dc);
+        System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
         driver.get("http://www.google.co.jp");
         WebElement element = driver.findElement(By.name("q"));
