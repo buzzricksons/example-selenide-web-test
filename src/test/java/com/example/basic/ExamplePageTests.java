@@ -52,10 +52,10 @@ public class ExamplePageTests extends AbstractTests {
      */
     @Test
     public void selenideBasicPattern() {
-        open("http://www.google.co.jp");
+        open("http://www.google.com");
         $(By.name("q")).val("selenide").pressEnter();
 
-        $("#ires .g").shouldBe(text("Selenide～Javaで超簡単・簡潔にUIテストを書く～ - Qiita"));
+        $("#ires .g").shouldBe(text("Selenide: concise UI tests in Java"));
         $$("#ires .g").shouldHaveSize(10);
     }
 
@@ -65,10 +65,10 @@ public class ExamplePageTests extends AbstractTests {
      */
     @Test
     public void selenidePageObjectModelPattern() {
-        GoogleSearchPage searchPage = open("http://www.google.co.jp", GoogleSearchPage.class);
+        GoogleSearchPage searchPage = open("http://www.google.com", GoogleSearchPage.class);
         GoogleResultsPage resultsPage = searchPage.keywordSearchBy("selenide");
 
-        resultsPage.firstSectionText().shouldBe(text("Selenide～Javaで超簡単・簡潔にUIテストを書く～ - Qiita"));
+        resultsPage.firstSectionText().shouldBe(text("Selenide: concise UI tests in Java"));
         resultsPage.result().shouldHaveSize(10);
     }
 }
