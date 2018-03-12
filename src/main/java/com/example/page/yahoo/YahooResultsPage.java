@@ -12,7 +12,12 @@ import static com.codeborne.selenide.Selenide.$$;
  * @author HyungCheol Kim
  */
 public class YahooResultsPage {
-    public ElementsCollection results() {
-        return $$("#WS2m .w");
+    private final ElementsCollection result = $$("#WS2m .w");
+    public ElementsCollection result() {
+        return result;
+    }
+
+    public SelenideElement firstResultSectionText() {
+        return result.get(0);
     }
 }

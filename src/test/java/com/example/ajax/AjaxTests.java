@@ -1,24 +1,28 @@
 package com.example.ajax;
 
 import com.example.AbstractTests;
+import com.example.Settings;
 import org.junit.Test;
-import org.openqa.selenium.By;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.open;
 
 public class AjaxTests extends AbstractTests {
+    @Autowired
+    private Settings settings;
+
     /**
      * Test for Ajax.
      *
      */
     @Test
     public void testAjax() {
-        open(getSettings().getAjaxExamplePage1());
-        $(By.name("time")).setValue("3");
-        $("#button1").click();
+        AjaxSearchPage searchPage = open(settings.getAjaxExamplePage1(), AjaxSearchPage.class);
+        AjaxResultPage resultPage = searchPage.searchBy(settings.getTime());
 
-        $("#test1").shouldHave(text("3 seconds later"));
+        resultPage.timeText().shouldBe(appear);
+        resultPage.timeText().shouldBe(text("3 seconds later"));
+        resultPage.inputTimeText().shouldBe(disappear);
     }
 }

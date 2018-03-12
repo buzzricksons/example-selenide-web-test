@@ -15,6 +15,6 @@ public class ExamWebAppRestController {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        return String.format("%s seconds later", time);
+        return time;
     }
 }

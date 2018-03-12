@@ -24,9 +24,7 @@ public class YahooPageTests extends AbstractTests {
         YahooSearchPage searchPage = open(getSettings().getYahooPage(), YahooSearchPage.class);
         YahooResultsPage resultsPage = searchPage.keywordSearchBy("selenide");
 
-        ElementsCollection result = resultsPage.results();
-
-        result.get(0).shouldHave(text("Selenide～Javaで超簡単・簡潔にUIテストを書く～ - Qiita"));
-        result.shouldHaveSize(10);
+        resultsPage.firstResultSectionText().shouldBe(text("Selenide～Javaで超簡単・簡潔にUIテストを書く～ - Qiita"));
+        resultsPage.result().shouldHaveSize(10);
     }
 }

@@ -14,3 +14,4 @@ search:
 
 ajax:
   examplePage1: http://localhost:11080/time/top
+  time: 3

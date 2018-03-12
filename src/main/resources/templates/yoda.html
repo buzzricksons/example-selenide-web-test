@@ -12,7 +12,8 @@
                         type: "GET",
                         url:  "http://localhost:11080/get_time/?time="+time,
                         success: function(result){
-                            $("#test1").text(result);
+                            $(".result1").append('<span id="result-time">'+result+' seconds later</span>');
+                            // $("#test1").text(result);
                             clear();
                         }
                     });
@@ -32,7 +33,7 @@
                 <input name="time" type="text" value=""/>
                 <button id="button1">click</button>
             <h2>
-                <span id="test1"></span>
+                <div class="result1"></div>
             </h2>
         </div>
 
