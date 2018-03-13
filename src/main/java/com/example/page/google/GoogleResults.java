@@ -15,7 +15,7 @@ public class GoogleResults {
     @Getter
     private final ElementsCollection result = $$("#ires .g");
 
-    public SelenideElement firstSectionText() {
+    public SelenideElement firstSectionTitle() {
         return result.get(0);
     }
 }
