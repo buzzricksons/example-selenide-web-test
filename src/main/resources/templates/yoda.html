@@ -13,7 +13,6 @@
                         url:  "http://localhost:11080/get_time/?time="+time,
                         success: function(result){
                             $(".result1").append('<span id="result-time">'+result+' seconds later</span>');
-                            // $("#test1").text(result);
                             clear();
                         }
                     });

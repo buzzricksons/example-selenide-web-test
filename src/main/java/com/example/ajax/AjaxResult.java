@@ -1,15 +1,17 @@
 package com.example.ajax;
 
 import com.codeborne.selenide.SelenideElement;
+import lombok.Getter;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.title;
+import static com.codeborne.selenide.WebDriverRunner.url;
 
 public class AjaxResult {
+    @Getter
     private final SelenideElement results = $(".result1");
-    public SelenideElement results() {
-        return results;
-    }
 
     public SelenideElement timeResult() {
         return results.$("#result-time");
@@ -17,5 +19,13 @@ public class AjaxResult {
 
     public SelenideElement inputTimeText() {
         return results.$(By.name("time"));
+    }
+
+    public void titleIs(String title) {
+        Assert.assertEquals(title, title());
+    }
+
+    public void urlIs(String url) {
+        Assert.assertEquals(url, url());
     }
 }

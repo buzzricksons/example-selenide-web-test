@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.open;
+
 /**
  * Test for Ajax.
  *
@@ -26,6 +27,8 @@ public class AjaxTests extends AbstractTests {
         AjaxSearch searchPage = open(settings.getAjaxExamplePage1(), AjaxSearch.class);
         AjaxResult resultPage = searchPage.searchBy(settings.getTime());
 
+        resultPage.titleIs("Selenide Ajax example");
+        resultPage.urlIs("http://localhost:11080/time/top");
         resultPage.timeResult().shouldBe(appear);
         resultPage.timeResult().shouldBe(text("3 seconds later"));
         resultPage.inputTimeText().shouldBe(disappear);

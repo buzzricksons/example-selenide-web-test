@@ -1,4 +1,4 @@
-package com.example.basic;
+package com.example.selenium_vs_selenide;
 
 import com.example.AbstractTests;
 import com.example.page.google.GoogleResults;
@@ -18,12 +18,12 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 /**
- * Test for Example Google Search by selenium and selenide.
+ * Test for Example Pattern Tests by selenium and selenide.
  *
  * @author HyungCheol Kim
  *
  */
-public class ExamplePageTests extends AbstractTests {
+public class PatternTests extends AbstractTests {
 //    @Test
     public void seleniumBasicPattern() {
         System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
@@ -42,7 +42,7 @@ public class ExamplePageTests extends AbstractTests {
         driver.quit();
     }
 
-    @Test
+//    @Test
     public void selenideBasicPattern() {
         open("http://www.google.com");
         $(By.name("q")).val("selenide").pressEnter();
@@ -52,7 +52,7 @@ public class ExamplePageTests extends AbstractTests {
         $$("#ires .g").shouldHaveSize(10);
     }
 
-    @Test
+//    @Test
     public void selenidePageObjectModelPattern() {
         GoogleSearch searchPage = open("http://www.google.com", GoogleSearch.class);
         GoogleResults resultPage = searchPage.keywordSearchBy("selenide");
