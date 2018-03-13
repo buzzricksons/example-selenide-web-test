@@ -2,7 +2,6 @@ package com.example.selenium_vs_selenide;
 
 import com.example.AbstractTests;
 import org.junit.Assert;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -19,10 +18,9 @@ import static com.codeborne.selenide.Selenide.open;
  * Test for Example Ajax Tests by selenium and selenide.
  *
  * @author HyungCheol Kim
- *
  */
 public class AjaxTests extends AbstractTests {
-//    @Test
+    //    @Test
     public void seleniumAjaxTest() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -48,7 +46,7 @@ public class AjaxTests extends AbstractTests {
         driver.quit();
     }
 
-//    @Test
+    //    @Test
     public void selenideAjaxTest() {
         open("http://localhost:11080/time/top");
         $(By.name("time")).setValue("3");
