@@ -3,9 +3,6 @@ jdk: oraclejdk8
 
 sudo: false
 
-addons:
-  chrome: stable
-
 env:
   - MAVEN_VERSION=3.3.9
 
