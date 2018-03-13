@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -35,6 +36,7 @@ public class ExamplePageTests extends AbstractTests {
         List<WebElement> findElements = driver.findElements(By.xpath("//*[@id='rso']//h3/a"));
 
         Assert.assertEquals("Selenide: concise UI tests in Java", findElements.get(0).getText());
+        Assert.assertTrue(findElements.size() > 0);
         Assert.assertEquals(10, findElements.size());
 
         driver.quit();
@@ -46,6 +48,7 @@ public class ExamplePageTests extends AbstractTests {
         $(By.name("q")).val("selenide").pressEnter();
 
         $("#ires .g").shouldBe(text("Selenide: concise UI tests in Java"));
+        $$("#ires .g").shouldHave(sizeGreaterThan(0));
         $$("#ires .g").shouldHaveSize(10);
     }
 
@@ -55,6 +58,7 @@ public class ExamplePageTests extends AbstractTests {
         GoogleResults resultPage = searchPage.keywordSearchBy("selenide");
 
         resultPage.firstSectionText().shouldBe(text("Selenide: concise UI tests in Java"));
-        resultPage.result().shouldHaveSize(10);
+        resultPage.getResult().shouldHave(sizeGreaterThan(0));
+        resultPage.getResult().shouldHaveSize(10);
     }
 }

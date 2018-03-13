@@ -5,6 +5,7 @@ import com.example.Settings;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -25,9 +26,10 @@ public class GooglePageTests extends AbstractTests {
     @Test
     public void testGoogleSearch() {
         GoogleSearch searchPage = open(settings.getGooglePage(), GoogleSearch.class);
-        GoogleResults resultsPage = searchPage.keywordSearchBy("selenide");
+        GoogleResults resultPage = searchPage.keywordSearchBy("selenide");
 
-        resultsPage.firstSectionText().shouldBe(text("Selenide: concise UI tests in Java"));
-        resultsPage.result().shouldHaveSize(10);
+        resultPage.firstSectionText().shouldBe(text("Selenide: concise UI tests in Java"));
+        resultPage.getResult().shouldHave(sizeGreaterThan(0));
+        resultPage.getResult().shouldHaveSize(10);
     }
 }

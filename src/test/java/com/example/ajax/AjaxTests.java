@@ -7,7 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.open;
-
+/**
+ * Test for Ajax.
+ *
+ * @author HyungCheol Kim
+ *
+ */
 public class AjaxTests extends AbstractTests {
     @Autowired
     private Settings settings;
