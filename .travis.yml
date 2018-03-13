@@ -8,12 +8,13 @@ env:
 
 dist: trusty
 
-addons:
-  chrome: stable
 
 install:
   - "mvn -N io.takari:maven:wrapper -Dmaven=${MAVEN_VERSION}"
   - "./mvnw --show-version --errors --batch-mode test-compile dependency:go-offline"
+
+addons:
+  chrome: stable
 
 script:
   - "./mvnw --show-version --errors --batch-mode -Prun-its clean verify -Dchromeoptions.args=headless"
