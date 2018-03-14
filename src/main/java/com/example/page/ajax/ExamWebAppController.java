@@ -1,4 +1,4 @@
-package com.example.ajax;
+package com.example.page.ajax;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

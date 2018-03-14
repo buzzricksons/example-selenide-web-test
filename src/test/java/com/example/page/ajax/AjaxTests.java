@@ -1,4 +1,4 @@
-package com.example.ajax;
+package com.example.page.ajax;
 
 import com.example.AbstractTests;
 import com.example.Settings;
