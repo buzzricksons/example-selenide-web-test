@@ -9,6 +9,11 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.title;
 import static com.codeborne.selenide.WebDriverRunner.url;
 
+/**
+ * Page Object for Ajax Search Result.
+ *
+ * @author HyungCheol Kim
+ */
 public class AjaxResult {
     @Getter
     private final SelenideElement results = $(".result1");
