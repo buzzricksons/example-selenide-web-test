@@ -2,6 +2,7 @@
 Using Selenide and Spring boot.
 - [Selenide](http://selenide.org/)
 - Spring Boot
+- lombok
 - JDK 1.8
 - [Latest Chrome(Headless mode included)](https://www.google.com/chrome/browser/desktop/index.html)
 - Travis CI
@@ -51,3 +52,6 @@ See below setting file.
 ```
 https://github.com/buzzricksons/example-selenide-web-test/blob/master/.travis.yml
 ```
+
+## If lobmok compile error occurred
+https://www.jetbrains.com/help/idea/configuring-annotation-processing.html
