@@ -11,12 +11,10 @@ import static com.codeborne.selenide.Selenide.open;
  * Test for Yahoo.co.jp Search.
  *
  * @author HyungCheol Kim
- *
  */
 public class YahooPageTests extends AbstractTests {
     /**
      * Test for keyword "selenide".
-     *
      */
     @Test
     public void testYahooSearch() {
