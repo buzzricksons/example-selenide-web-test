@@ -25,6 +25,7 @@ import java.util.concurrent.TimeUnit;
 public class AbstractTests {
     private static boolean initialized = false;
 
+    @Getter
     @Autowired
     private Settings settings;
 
