@@ -29,13 +29,13 @@ public class PatternTests extends AbstractTests {
         System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
-        driver.get("http://www.google.com");
+        driver.get("http://www.google.co.jp");
         WebElement element = driver.findElement(By.name("q"));
         element.sendKeys("selenide");
         element.submit();
         List<WebElement> findElements = driver.findElements(By.xpath("//*[@id='rso']//h3/a"));
 
-        Assert.assertEquals("Selenide: concise UI tests in Java", findElements.get(0).getText());
+        Assert.assertEquals("Selenide～Javaで超簡単・簡潔にUIテストを書く～ - Qiita", findElements.get(0).getText());
         Assert.assertTrue(findElements.size() > 0);
         Assert.assertEquals(10, findElements.size());
 
