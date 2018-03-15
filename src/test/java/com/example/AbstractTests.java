@@ -1,6 +1,7 @@
 package com.example;
 
 import lombok.Getter;
+import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
@@ -51,12 +52,12 @@ public class AbstractTests {
     }
 
     /**
-     * Set time interval at every test classes.
+     * Set time interval at every test ended.
      */
-    @AfterClass
-    public static void setTimeInterval() {
+    @After
+    public void setTimeInterval() {
         try {
-            TimeUnit.SECONDS.sleep(Long.valueOf(1));
+            TimeUnit.SECONDS.sleep(Long.valueOf(settings.getTimeInterval()));
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
