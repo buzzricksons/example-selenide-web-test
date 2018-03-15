@@ -25,7 +25,7 @@ public class AjaxTests extends AbstractTests {
     public void seleniumAjaxTest1() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.get("http://localhost:11080/time/top");
+        driver.get("http://localhost:11080/top");
         driver.findElement(By.name("time")).sendKeys("3");
         driver.findElement(By.id("button1")).click();
         long timeout = 4000, polling = 100, start = System.currentTimeMillis();
@@ -50,7 +50,7 @@ public class AjaxTests extends AbstractTests {
     public void seleniumAjaxTest2() {
         System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.get("http://localhost:11080/time/top");
+        driver.get("http://localhost:11080/top");
         driver.findElement(By.name("time")).sendKeys("3");
         driver.findElement(By.id("button1")).click();
 
@@ -63,9 +63,9 @@ public class AjaxTests extends AbstractTests {
         driver.quit();
     }
 
-    //    @Test
+//    @Test
     public void selenideAjaxTest() {
-        open("http://localhost:11080/time/top");
+        open("http://localhost:11080/top");
         $(By.name("time")).setValue("3");
         $("#button1").click();
 
