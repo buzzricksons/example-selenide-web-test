@@ -5,7 +5,7 @@ setting:
   browser: Chrome
   screenshot-folder: test-result/
   isHeadless: true
-  timeInterval: 0
+  timeInterval: 1
 
 search:
   googlePage: http://google.com/
