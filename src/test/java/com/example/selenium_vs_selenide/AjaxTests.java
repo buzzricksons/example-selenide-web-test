@@ -2,6 +2,7 @@ package com.example.selenium_vs_selenide;
 
 import com.example.AbstractTests;
 import org.junit.Assert;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -20,15 +21,13 @@ import static com.codeborne.selenide.Selenide.open;
  * @author HyungCheol Kim
  */
 public class AjaxTests extends AbstractTests {
-    //    @Test
-    public void seleniumAjaxTest() throws InterruptedException {
+//    @Test
+    public void seleniumAjaxTest1() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("http://localhost:11080/time/top");
-
         driver.findElement(By.name("time")).sendKeys("3");
         driver.findElement(By.id("button1")).click();
-
         long timeout = 4000, polling = 100, start = System.currentTimeMillis();
         WebElement result = null;
         while (System.currentTimeMillis() - start < timeout) {
@@ -41,6 +40,24 @@ public class AjaxTests extends AbstractTests {
                 TimeUnit.MILLISECONDS.sleep(polling);
             }
         }
+
+        Assert.assertEquals("3 seconds later", result.getText());
+
+        driver.quit();
+    }
+
+//    @Test
+    public void seleniumAjaxTest2() {
+        System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://localhost:11080/time/top");
+        driver.findElement(By.name("time")).sendKeys("3");
+        driver.findElement(By.id("button1")).click();
+
+        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
+
+        WebElement result = driver.findElement(By.id("result-time"));
+
         Assert.assertEquals("3 seconds later", result.getText());
 
         driver.quit();
