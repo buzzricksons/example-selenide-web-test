@@ -4,6 +4,7 @@ import com.example.AbstractTests;
 import com.example.page.google.GoogleResults;
 import com.example.page.google.GoogleSearch;
 import org.junit.Assert;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,7 +24,7 @@ import static com.codeborne.selenide.Selenide.*;
  *
  */
 public class PatternTests extends AbstractTests {
-//    @Test
+    @Test
     public void seleniumBasicPattern() {
         System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
         WebDriver driver = new ChromeDriver();
