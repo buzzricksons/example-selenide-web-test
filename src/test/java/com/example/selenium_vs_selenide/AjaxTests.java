@@ -63,7 +63,7 @@ public class AjaxTests extends AbstractTests {
         driver.quit();
     }
 
-    @Test
+//    @Test
     public void selenideAjaxTest() {
         open("http://localhost:11080/top");
         $(By.name("time")).setValue("3");
