@@ -24,7 +24,7 @@ import static com.codeborne.selenide.Selenide.*;
  *
  */
 public class PatternTests extends AbstractTests {
-    @Test
+//    @Test
     public void seleniumBasicPattern() {
         System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
         WebDriver driver = new ChromeDriver();
