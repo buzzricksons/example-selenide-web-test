@@ -6,7 +6,7 @@ Using Selenide and Spring boot.
 - JDK 1.8
 - [Latest Chrome(Headless mode included)](https://www.google.com/chrome/browser/desktop/index.html)
 - Travis CI
-
+/
 ## Test case
 - Ajax test(example web app included.)
 - Google Search test
