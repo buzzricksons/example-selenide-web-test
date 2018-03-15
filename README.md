@@ -16,13 +16,13 @@ Using Selenide and Spring boot.
 # Usage
 ## Basic
 ```
-$ mvn clean test
+$ mvn clean test -Dchromeoptions.args="--disable-gpu"
 ```
 
 ## Headless
 ### If using maven
 ```
-$ mvn clean test -Dchromeoptions.args=headless
+$ mvn clean test -Dchromeoptions.args="--headless --disable-gpu"
 ```
 
 ### If using java source(Not yet supported)
