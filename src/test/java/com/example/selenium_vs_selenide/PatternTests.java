@@ -26,7 +26,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class PatternTests extends AbstractTests {
 //    @Test
     public void seleniumBasicPattern() {
-        System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "./chromedriver_win.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
         driver.get("http://www.google.co.jp");

@@ -23,7 +23,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class AjaxTests extends AbstractTests {
 //    @Test
     public void seleniumAjaxTest1() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "./chromedriver_win.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("http://localhost:11080/top");
         driver.findElement(By.name("time")).sendKeys("3");
@@ -48,7 +48,7 @@ public class AjaxTests extends AbstractTests {
 
 //    @Test
     public void seleniumAjaxTest2() {
-        System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "./chromedriver_win.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("http://localhost:11080/top");
         driver.findElement(By.name("time")).sendKeys("3");
@@ -63,7 +63,7 @@ public class AjaxTests extends AbstractTests {
         driver.quit();
     }
 
-//    @Test
+    @Test
     public void selenideAjaxTest() {
         open("http://localhost:11080/top");
         $(By.name("time")).setValue("3");
