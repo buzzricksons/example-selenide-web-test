@@ -28,7 +28,7 @@ public class AjaxTests extends AbstractTests {
         AjaxResult resultPage = searchPage.searchBy(settings.getTime());
 
         resultPage.titleIs("Selenide Ajax example");
-        resultPage.urlIs("http://localhost:11080/time/top");
+        resultPage.urlIs("http://localhost:11080/top");
         resultPage.timeResult().shouldBe(appear);
         resultPage.timeResult().shouldBe(text("3 seconds later"));
         resultPage.inputTimeText().shouldBe(disappear);

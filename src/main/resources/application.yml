@@ -13,5 +13,5 @@ search:
   naverPage: http://naver.com/
 
 ajax:
-  examplePage1: http://localhost:11080/time/top
+  examplePage1: http://localhost:11080/top
   time: 3
