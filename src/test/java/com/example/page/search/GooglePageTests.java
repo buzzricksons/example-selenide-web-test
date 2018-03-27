@@ -1,7 +1,10 @@
-package com.example.page.google;
+package com.example.page.search;
 
 import com.example.AbstractTests;
-import com.example.Settings;
+import com.example.page.google.GoogleResults;
+import com.example.page.google.GoogleSearch;
+import com.example.settings.SearchSettings;
+import com.example.settings.Settings;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -17,7 +20,7 @@ import static com.codeborne.selenide.Selenide.open;
  */
 public class GooglePageTests extends AbstractTests {
     @Autowired
-    private Settings settings;
+    private SearchSettings settings;
 
     /**
      * Test for keyword "selenide".

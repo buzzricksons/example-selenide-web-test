@@ -1,7 +1,11 @@
-package com.example.page.naver;
+package com.example.page.search;
 
 import com.example.AbstractTests;
+import com.example.page.naver.NaverResults;
+import com.example.page.naver.NaverSearch;
+import com.example.settings.SearchSettings;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
@@ -13,13 +17,16 @@ import static com.codeborne.selenide.Selenide.open;
  *
  */
 public class NaverPageTests extends AbstractTests {
+    @Autowired
+    private SearchSettings settings;
+
     /**
      * Test for keyword "selenide".
      *
      */
     @Test
     public void testNaverSearch() {
-        NaverSearch searchPage = open(getSettings().getNaverPage(), NaverSearch.class);
+        NaverSearch searchPage = open(settings.getNaverPage(), NaverSearch.class);
         NaverResults resultsPage = searchPage.keywordSearchBy("selenide");
 
         resultsPage.firstResultSectionText().shouldHave(text("selenide 예문보기\n" +

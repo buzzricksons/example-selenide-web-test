@@ -5,7 +5,7 @@ setting:
   browser: Chrome
   screenshot-folder: test-result/
   isHeadless: true
-  timeInterval: 1
+  timeInterval: 0
 
 search:
   googlePage: http://google.com/
@@ -14,4 +14,4 @@ search:
 
 ajax:
   examplePage1: http://localhost:11080/top
-  time: 3
+  time: "3"

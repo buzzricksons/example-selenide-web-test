@@ -1,7 +1,11 @@
-package com.example.page.yahoo;
+package com.example.page.search;
 
 import com.example.AbstractTests;
+import com.example.page.yahoo.YahooResults;
+import com.example.page.yahoo.YahooSearch;
+import com.example.settings.SearchSettings;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Condition.text;
@@ -13,12 +17,15 @@ import static com.codeborne.selenide.Selenide.open;
  * @author HyungCheol Kim
  */
 public class YahooPageTests extends AbstractTests {
+    @Autowired
+    private SearchSettings settings;
+
     /**
      * Test for keyword "selenide".
      */
     @Test
     public void testYahooSearch() {
-        YahooSearch searchPage = open(getSettings().getYahooPage(), YahooSearch.class);
+        YahooSearch searchPage = open(settings.getYahooPage(), YahooSearch.class);
         YahooResults resultsPage = searchPage.keywordSearchBy("selenide");
 
         resultsPage.firstResultSectionText().shouldBe(text("Selenide～Javaで超簡単・簡潔にUIテストを書く～ - Qiita"));

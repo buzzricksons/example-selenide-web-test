@@ -1,7 +1,10 @@
 package com.example.page.ajax;
 
 import com.example.AbstractTests;
-import com.example.Settings;
+import com.example.page.ajax.AjaxResult;
+import com.example.page.ajax.AjaxSearch;
+import com.example.settings.AjaxSettings;
+import com.example.settings.Settings;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -16,7 +19,7 @@ import static com.codeborne.selenide.Selenide.open;
  */
 public class AjaxTests extends AbstractTests {
     @Autowired
-    private Settings settings;
+    private AjaxSettings ajaxSettingssettings;
 
     /**
      * Test for Ajax Example.
@@ -24,8 +27,8 @@ public class AjaxTests extends AbstractTests {
      */
     @Test
     public void testAjax() {
-        AjaxSearch searchPage = open(settings.getAjaxExamplePage1(), AjaxSearch.class);
-        AjaxResult resultPage = searchPage.searchBy(settings.getTime());
+        AjaxSearch searchPage = open(ajaxSettingssettings.getExamplePage1(), AjaxSearch.class);
+        AjaxResult resultPage = searchPage.searchBy(ajaxSettingssettings.getTime());
 
         resultPage.titleIs("Selenide Ajax example");
         resultPage.urlIs("http://localhost:11080/top");

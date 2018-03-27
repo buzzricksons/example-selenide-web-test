@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.settings.Settings;
 import lombok.Getter;
 import org.junit.After;
 import org.junit.Before;
