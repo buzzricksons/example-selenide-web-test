@@ -4,7 +4,6 @@ import com.example.AbstractTests;
 import com.example.page.google.GoogleResults;
 import com.example.page.google.GoogleSearch;
 import com.example.settings.SearchSettings;
-import com.example.settings.Settings;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

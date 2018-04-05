@@ -1,7 +1,7 @@
 # Example for Selenide web test
 Using Selenide and Spring boot.
-- [Selenide](http://selenide.org/)
-- Spring Boot
+- [Selenide](http://selenide.org/) 4.10
+- Spring Boot 2.0
 - lombok
 - JDK 1.8
 - [Latest Chrome(Headless mode included)](https://www.google.com/chrome/browser/desktop/index.html)
@@ -25,10 +25,10 @@ $ mvn clean test -Dchromeoptions.args="--disable-gpu"
 $ mvn clean test -Dchromeoptions.args="--headless --disable-gpu"
 ```
 
-### If using java source(Not yet supported)
+### If using java source
 edit`application.yml`
 ```
-  headless: true
+  isHeadless: true
 ```
 
 # If test failed
