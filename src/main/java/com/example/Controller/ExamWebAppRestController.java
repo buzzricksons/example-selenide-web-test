@@ -9,6 +9,12 @@ import java.util.concurrent.TimeUnit;
 
 @RestController
 public class ExamWebAppRestController {
+    /**
+     * Make random seconde from time parameter.
+     *
+     * @param time second
+     * @return Random second from 0 to parameter time.
+     */
     @RequestMapping("/get_time")
     public String data(@RequestParam(name="time", required=true, defaultValue = "0") int time) {
         int randomNum = ThreadLocalRandom.current().nextInt(0, time + 1);
