@@ -18,8 +18,8 @@ public class AjaxResult {
     @Getter
     private final SelenideElement results = $(".result1");
 
-    public SelenideElement timeResult() {
-        return results.$("#result-time");
+    public SelenideElement textResult() {
+        return results.$("#result-text");
     }
 
     public SelenideElement inputTimeText() {

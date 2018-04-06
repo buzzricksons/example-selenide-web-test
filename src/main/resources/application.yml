@@ -5,12 +5,20 @@ server:
 #  level:
 #    root: INFO
 #    org.springframework.web: INFO
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    com: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
 
 ############General Setting##############
 setting:
   browser: Chrome
   screenshot-folder: test-result/
-  isHeadless: true
+  isHeadless: false
   timeInterval: 0
 ############/General Setting##############
 
@@ -26,6 +34,6 @@ search:
 ############Ajax Test Setting##############
 ajax:
   examplePage1: http://localhost:11080/top
-  time: "3"
+  time: 4
 ############/Ajax Test Setting##############
 

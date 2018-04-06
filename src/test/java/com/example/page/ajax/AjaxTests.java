@@ -29,8 +29,8 @@ public class AjaxTests extends AbstractTests {
 
         resultPage.titleIs("Selenide Ajax example");
         resultPage.urlIs("http://localhost:11080/top");
-        resultPage.timeResult().shouldBe(appear);
-        resultPage.timeResult().shouldBe(text("3 seconds later"));
+        resultPage.textResult().shouldBe(appear);
+        resultPage.textResult().shouldBe(text("Hello World!"));
         resultPage.inputTimeText().shouldBe(disappear);
     }
 }

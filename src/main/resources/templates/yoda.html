@@ -7,19 +7,24 @@
     <script type="text/javascript" th:inline="javascript">
         $(document).ready(function(){
             $("#button1").click(function() {
-                $(".result1").find("#result-time").remove();
+                resultClear();
                 var time = $("input[name=time]").val();
                     $.ajax({
                         type: "GET",
                         url:  "http://localhost:11080/get_time/?time="+time,
                         success: function(result){
-                            $(".result1").append('<span id="result-time">'+result+' seconds later</span>');
-                            clear();
+                            $(".result1").append('<span id="result-text">Hello World!</span>');
+                            $(".result1").append('</p><span id="result-time">('+result+' seconds later)</span>');
+                            inputClear();
                         }
                     });
             });
         });
-        function clear() {
+        function resultClear() {
+            $(".result1").find("#result-time").remove();
+            $(".result1").find("#result-text").remove();
+        }
+        function inputClear() {
             $("input[name=time]").val('');
             $("input[name=time]").text('');
         }
