@@ -24,6 +24,9 @@ import java.util.concurrent.TimeUnit;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @RunWith(SpringJUnit4ClassRunner.class)
 public class AbstractTests {
+    /**
+     * Singleton
+     */
     private static boolean initialized = false;
 
     @Getter

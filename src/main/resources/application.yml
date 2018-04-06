@@ -1,17 +1,31 @@
 server:
   port: 11080
 
+#logging:
+#  level:
+#    root: INFO
+#    org.springframework.web: INFO
+
+############General Setting##############
 setting:
   browser: Chrome
   screenshot-folder: test-result/
   isHeadless: true
   timeInterval: 0
+############/General Setting##############
 
+
+############Search Test Setting##############
 search:
   googlePage: http://google.com/
   yahooPage: http://yahoo.co.jp/
   naverPage: http://naver.com/
+############/Search Test Setting##############
 
+
+############Ajax Test Setting##############
 ajax:
   examplePage1: http://localhost:11080/top
   time: "3"
+############/Ajax Test Setting##############
+
