@@ -24,11 +24,11 @@ public class AjaxTests extends AbstractTests {
      */
     @Test
     public void testAjax() {
-        AjaxSearch searchPage = open(settings.getExamplePage1(), AjaxSearch.class);
+        AjaxSearch searchPage = open(settings.getAjaxPage(), AjaxSearch.class);
         AjaxResult resultPage = searchPage.searchBy(settings.getTime());
 
         resultPage.titleIs("Selenide Ajax example");
-        resultPage.urlIs("http://localhost:11080/top");
+        resultPage.urlIs(settings.getAjaxPage());
         resultPage.textResult().shouldBe(appear);
         resultPage.textResult().shouldBe(text("Hello World!"));
         resultPage.inputTimeText().shouldBe(disappear);

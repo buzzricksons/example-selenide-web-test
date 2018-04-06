@@ -33,7 +33,7 @@ search:
 
 ############Ajax Test Setting##############
 ajax:
-  examplePage1: http://localhost:11080/top
+  ajaxPage: http://localhost:11080/top
   time: 4
 ############/Ajax Test Setting##############
 

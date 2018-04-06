@@ -8,6 +8,6 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "ajax")
 public class AjaxSettings {
-    private String examplePage1;
+    private String ajaxPage;
     private String time;
 }
