@@ -29,7 +29,7 @@ search:
 
 ############Ajax Test Setting##############
 ajax:
-  ajaxPage: http://localhost:11080/top
+  ajaxPage: http://localhost:${server.port}/top
   time: 4
 ############/Ajax Test Setting##############
 
