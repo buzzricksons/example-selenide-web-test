@@ -13,6 +13,12 @@ Using Selenide and Spring boot.
 - Yahoo Search test
 - Naver Search test
 
+### Example web app
+```
+http://localhost:18080/top
+```
+You need to run `com.example.AutoTestApplication#main` method
+
 # Usage
 ## Basic
 ```
