@@ -30,6 +30,6 @@ search:
 ############Ajax Test Setting##############
 ajax:
   ajaxPage: http://localhost:${server.port}/top
-  time: 4
+  time: 3
 ############/Ajax Test Setting##############
 
