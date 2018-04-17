@@ -45,6 +45,9 @@ Screenshot and html file saved in `Git repository/test-result/Date and current t
 # Etc
 ## You can some custom setting at `application.yml` file.
 ```
+server:
+  port: 11080
+
 setting:
   browser: Chrome
   screenshot-folder: test-result/
