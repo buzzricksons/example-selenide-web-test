@@ -12,7 +12,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Optional;
 import java.util.concurrent.TimeUnit;
+import java.util.function.BiConsumer;
 
 /**
  * Initialization class for all test classes.
@@ -24,6 +26,10 @@ import java.util.concurrent.TimeUnit;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @RunWith(SpringJUnit4ClassRunner.class)
 public class AbstractTests {
+    private final BiConsumer<String, String> initSupplier = (k, v) -> Optional.of(v)
+            .filter(value -> !value.isEmpty())
+            .ifPresent(value -> System.setProperty(String.format("selenide.%s", k), value));
+
     /**
      * Singleton
      */
@@ -44,12 +50,10 @@ public class AbstractTests {
             return;
         }
 
-        LocalDateTime now = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
-
-        System.setProperty("selenide.browser", settings.getBrowser());
-        System.setProperty("selenide.reportsFolder", settings.getScreenshotFolder() + now.format(formatter));
-        System.setProperty("selenide.headless", settings.getIsHeadless());
+        initSupplier.accept("reportsFolder", settings.getScreenshotFolder() + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss")));
+        initSupplier.accept("headless", settings.getIsHeadless());
+        initSupplier.accept("browser", settings.getBrowser());
+        initSupplier.accept("timeout", settings.getTimeOut());
 
         this.initialized = true;
     }

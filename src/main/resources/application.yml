@@ -16,6 +16,7 @@ setting:
   screenshot-folder: test-result/
   isHeadless: false
   timeInterval: 0
+  timeOut:
 ############/General Setting##############
 
 

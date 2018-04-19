@@ -17,7 +17,6 @@ public class Settings {
 
     /**
      * If you use HeadlessChrome then set true.
-     * ※Not yet supported.
      */
     @Value("${setting.isHeadless}")
     private String isHeadless;
@@ -30,4 +29,11 @@ public class Settings {
 
     @Value("${setting.browser}")
     private String browser;
+
+    /**
+     * Set time out of each test case.
+     * If there is no timeout setting then 4 secondes(4000) is used.
+     */
+    @Value("${setting.timeOut}")
+    private String timeOut;
 }
