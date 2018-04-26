@@ -1,13 +1,13 @@
 server:
   port: 11080
 
-#logging:
-#  level:
-#    root: INFO
-#    org.springframework.web: INFO
-#    com: INFO
-#  pattern:
-#    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    com: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
 
 
 ############General Setting##############
