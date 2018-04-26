@@ -5,7 +5,7 @@ Using Selenide and Spring boot.
 - lombok
 - JDK 1.8
 - [Latest Chrome(Headless mode included)](https://www.google.com/chrome/browser/desktop/index.html)
-- Travis CI
+- Travis CI(optional)
 
 ## Test case
 - Ajax test(example web app included.)
@@ -18,6 +18,13 @@ Using Selenide and Spring boot.
 http://localhost:18080/top
 ```
 You need to run `com.example.AutoTestApplication#main` method
+
+#### Usage
+Enter time value(seconds) at input box. Text message printed in `0 seconds ~ entered time value`.
+
+(Elapsed time is random between 0 seconds and entered time value.)
+- ex)If you enter 3, then text message printed in 0~3 seconds.
+
 
 # Usage
 ## Basic
