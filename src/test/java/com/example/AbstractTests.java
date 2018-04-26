@@ -26,7 +26,11 @@ import java.util.function.BiConsumer;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @RunWith(SpringJUnit4ClassRunner.class)
 public class AbstractTests {
-    private final BiConsumer<String, String> initSupplier = (k, v) -> Optional.of(v)
+    /**
+     * If setting value existed, Selenide setting executed.
+     *
+     */
+    private final BiConsumer<String, String> initSetting = (k, v) -> Optional.of(v)
             .filter(value -> !value.isEmpty())
             .ifPresent(value -> System.setProperty(String.format("selenide.%s", k), value));
 
@@ -50,10 +54,10 @@ public class AbstractTests {
             return;
         }
 
-        initSupplier.accept("reportsFolder", settings.getScreenshotFolder() + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss")));
-        initSupplier.accept("headless", settings.getIsHeadless());
-        initSupplier.accept("browser", settings.getBrowser());
-        initSupplier.accept("timeout", settings.getTimeOut());
+        initSetting.accept("reportsFolder", settings.getScreenshotFolder() + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss")));
+        initSetting.accept("headless", settings.getIsHeadless());
+        initSetting.accept("browser", settings.getBrowser());
+        initSetting.accept("timeout", settings.getTimeOut());
 
         this.initialized = true;
     }
