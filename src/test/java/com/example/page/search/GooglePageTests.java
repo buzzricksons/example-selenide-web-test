@@ -1,8 +1,8 @@
 package com.example.page.search;
 
 import com.example.AbstractTests;
-import com.example.page.google.GoogleResults;
-import com.example.page.google.GoogleSearch;
+import com.example.page.search.google.GoogleResults;
+import com.example.page.search.google.GoogleSearch;
 import com.example.settings.SearchSettings;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

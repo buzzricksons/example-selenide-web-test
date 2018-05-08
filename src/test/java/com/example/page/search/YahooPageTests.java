@@ -1,8 +1,8 @@
 package com.example.page.search;
 
 import com.example.AbstractTests;
-import com.example.page.yahoo.YahooResults;
-import com.example.page.yahoo.YahooSearch;
+import com.example.page.search.yahoo.YahooResults;
+import com.example.page.search.yahoo.YahooSearch;
 import com.example.settings.SearchSettings;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

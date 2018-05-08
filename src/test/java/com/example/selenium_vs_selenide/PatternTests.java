@@ -1,10 +1,9 @@
 package com.example.selenium_vs_selenide;
 
 import com.example.AbstractTests;
-import com.example.page.google.GoogleResults;
-import com.example.page.google.GoogleSearch;
+import com.example.page.search.google.GoogleResults;
+import com.example.page.search.google.GoogleSearch;
 import org.junit.Assert;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

@@ -1,8 +1,8 @@
 package com.example.page.search;
 
 import com.example.AbstractTests;
-import com.example.page.naver.NaverResults;
-import com.example.page.naver.NaverSearch;
+import com.example.page.search.naver.NaverResults;
+import com.example.page.search.naver.NaverSearch;
 import com.example.settings.SearchSettings;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

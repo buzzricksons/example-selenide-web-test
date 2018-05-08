@@ -1,4 +1,4 @@
-package com.example.page.google;
+package com.example.page.search.google;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;

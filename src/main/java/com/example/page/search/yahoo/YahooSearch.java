@@ -1,4 +1,4 @@
-package com.example.page.yahoo;
+package com.example.page.search.yahoo;
 
 import org.openqa.selenium.By;
 

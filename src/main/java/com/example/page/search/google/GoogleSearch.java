@@ -1,4 +1,4 @@
-package com.example.page.google;
+package com.example.page.search.google;
 
 import org.openqa.selenium.By;
 

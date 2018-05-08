@@ -1,4 +1,4 @@
-package com.example.page.naver;
+package com.example.page.search.naver;
 
 import org.openqa.selenium.By;
 
