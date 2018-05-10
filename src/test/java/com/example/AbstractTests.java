@@ -35,9 +35,9 @@ public class AbstractTests {
             .ifPresent(value -> System.setProperty(String.format("selenide.%s", k), value));
 
     /**
-     * Singleton
+     * Singleton.
      */
-    private static boolean initialized = false;
+    private static boolean notInitialized = true;
 
     @Getter
     @Autowired
@@ -50,16 +50,15 @@ public class AbstractTests {
      */
     @Before
     public void initialize() {
-        if (initialized) {
-            return;
-        }
-
-        initSetting.accept("reportsFolder", settings.getScreenshotFolder() + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss")));
-        initSetting.accept("headless", settings.getIsHeadless());
-        initSetting.accept("browser", settings.getBrowser());
-        initSetting.accept("timeout", settings.getTimeOut());
-
-        this.initialized = true;
+        Optional.of(notInitialized)
+                .filter(Boolean::booleanValue)
+                .ifPresent((b) -> {
+                    initSetting.accept("reportsFolder", settings.getScreenshotFolder() + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss")));
+                    initSetting.accept("headless", settings.getIsHeadless());
+                    initSetting.accept("browser", settings.getBrowser());
+                    initSetting.accept("timeout", settings.getTimeOut());
+                    this.notInitialized = false;
+                });
     }
 
     /**
