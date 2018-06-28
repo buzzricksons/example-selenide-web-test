@@ -22,6 +22,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <!-- set selenium version from Selenide's selenium version -->
         <selenium.version>3.13.0</selenium.version>
     </properties>
 
