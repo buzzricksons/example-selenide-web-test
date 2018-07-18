@@ -5,6 +5,7 @@ import com.example.page.search.naver.NaverResults;
 import com.example.page.search.naver.NaverSearch;
 import com.example.settings.SearchSettings;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import static com.codeborne.selenide.Condition.text;
@@ -25,7 +26,8 @@ public class NaverPageTests extends AbstractTests {
      *
      */
     //@Test
-    public void testNaverSearch() {
+    @DisplayName("Naver検索テスト")
+    public void naverSearch() {
         NaverSearch searchPage = open(settings.getNaverPage(), NaverSearch.class);
         NaverResults resultsPage = searchPage.keywordSearchBy("selenide");
 

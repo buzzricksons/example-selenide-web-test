@@ -5,6 +5,7 @@ import com.example.page.search.google.GoogleResults;
 import com.example.page.search.google.GoogleSearch;
 import com.example.settings.SearchSettings;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
@@ -26,7 +27,8 @@ public class GooglePageTests extends AbstractTests {
      *
      */
     @Test
-    public void testGoogleSearch() {
+    @DisplayName("グーグル検索テスト")
+    public void googleSearch() {
         GoogleSearch searchPage = open(settings.getGooglePage(), GoogleSearch.class);
         GoogleResults resultPage = searchPage.keywordSearchBy("selenide");
 
