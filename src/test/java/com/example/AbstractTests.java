@@ -73,7 +73,7 @@ public class AbstractTests {
         }
     }
 
-    @Test
+    @Disable
     public void ignoredTestMethod() {
         //avoid for java.lang.Exception: No runnable methods
     }
