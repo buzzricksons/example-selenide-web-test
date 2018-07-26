@@ -3,6 +3,7 @@ package com.example.selenium_vs_selenide;
 import com.example.AbstractTests;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -21,9 +22,10 @@ import static com.codeborne.selenide.Selenide.open;
  * @author HyungCheol Kim
  */
 public class AjaxTests extends AbstractTests {
-//    @Test
+    @Test
+    @Disabled
     public void seleniumAjaxTest1() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "./chromedriver_win.exe");
+        System.setProperty("webdriver.chrome.driver", "./chromedriver_mac");
         WebDriver driver = new ChromeDriver();
         driver.get("http://localhost:11080/top");
         driver.findElement(By.name("time")).sendKeys("3");
@@ -46,9 +48,10 @@ public class AjaxTests extends AbstractTests {
         driver.quit();
     }
 
-//    @Test
+    @Test
+    @Disabled
     public void seleniumAjaxTest2() {
-        System.setProperty("webdriver.chrome.driver", "./chromedriver_win.exe");
+        System.setProperty("webdriver.chrome.driver", "./chromedriver_mac");
         WebDriver driver = new ChromeDriver();
         driver.get("http://localhost:11080/top");
         driver.findElement(By.name("time")).sendKeys("3");
@@ -63,7 +66,8 @@ public class AjaxTests extends AbstractTests {
         driver.quit();
     }
 
-    //@Test
+    @Test
+//    @Disabled
     public void selenideAjaxTest() {
         open("http://localhost:11080/top");
         $(By.name("time")).setValue("3");

@@ -4,6 +4,8 @@ import com.example.AbstractTests;
 import com.example.page.search.google.GoogleResults;
 import com.example.page.search.google.GoogleSearch;
 import org.junit.Assert;
+import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,9 +25,10 @@ import static com.codeborne.selenide.Selenide.*;
  *
  */
 public class PatternTests extends AbstractTests {
-//    @Test
+    @Test
+    @Disabled
     public void seleniumBasicPattern() {
-        System.setProperty("webdriver.chrome.driver", "./chromedriver_win.exe");
+        System.setProperty("webdriver.chrome.driver", "./chromedriver_mac");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
         driver.get("http://www.google.co.jp");
@@ -41,7 +44,8 @@ public class PatternTests extends AbstractTests {
         driver.quit();
     }
 
-//    @Test
+    @Test
+    @Disabled
     public void selenideBasicPattern() {
         open("http://www.google.com");
         $(By.name("q")).val("selenide").pressEnter();
@@ -51,7 +55,8 @@ public class PatternTests extends AbstractTests {
         $$("#ires .g").shouldHaveSize(10);
     }
 
-//    @Test
+    @Test
+//    @Disabled
     public void selenidePageObjectModelPattern() {
         GoogleSearch searchPage = open("http://www.google.com", GoogleSearch.class);
         GoogleResults resultPage = searchPage.keywordSearchBy("selenide");

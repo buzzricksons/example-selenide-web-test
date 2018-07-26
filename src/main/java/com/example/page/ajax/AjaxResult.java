@@ -1,9 +1,11 @@
 package com.example.page.ajax;
 
 import com.codeborne.selenide.SelenideElement;
-import lombok.Getter;
-import org.junit.Assert;
+
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
+
+import lombok.Getter;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.title;
@@ -27,10 +29,10 @@ public class AjaxResult {
     }
 
     public void titleIs(String title) {
-        Assert.assertEquals(title, title());
+        Assertions.assertEquals(title, title());
     }
 
     public void urlIs(String url) {
-        Assert.assertEquals(url, url());
+        Assertions.assertEquals(url, url());
     }
 }

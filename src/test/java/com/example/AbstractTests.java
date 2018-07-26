@@ -1,10 +1,11 @@
 package com.example;
 
 import com.example.settings.Settings;
-import lombok.Getter;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,6 +16,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 import java.util.function.BiConsumer;
+
+import lombok.Getter;
 
 /**
  * Initialization class for all test classes.
@@ -73,7 +76,8 @@ public class AbstractTests {
         }
     }
 
-    @Disable
+    @Test
+//    @Disabled
     public void ignoredTestMethod() {
         //avoid for java.lang.Exception: No runnable methods
     }
