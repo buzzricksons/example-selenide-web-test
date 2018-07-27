@@ -28,7 +28,7 @@ public class GooglePageTests extends AbstractTests {
      *
      */
     @Test
-    @DisplayName("グーグル検索テスト")
+    @DisplayName("グーグル検索📚テスト")
     public void googleSearch() {
         GoogleSearch searchPage = open(settings.getGooglePage(), GoogleSearch.class);
         GoogleResults resultPage = searchPage.keywordSearchBy("selenide");

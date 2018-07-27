@@ -26,7 +26,7 @@ public class YahooPageTests extends AbstractTests {
      * Test for keyword "selenide".
      */
     @Test
-    @DisplayName("ヤフー検索テスト😜")
+    @DisplayName("ヤフー検索🍙テスト")
     public void yahooSearch() {
         YahooSearch searchPage = open(settings.getYahooPage(), YahooSearch.class);
         YahooResults resultsPage = searchPage.keywordSearchBy("selenide");

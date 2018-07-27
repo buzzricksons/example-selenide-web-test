@@ -27,7 +27,7 @@ public class NaverPageTests extends AbstractTests {
      *
      */
     @Test
-    @DisplayName("Naver検索テスト")
+    @DisplayName("🇰🇷Naver検索👨🏻‍💻テスト")
     public void naverSearch() {
         NaverSearch searchPage = open(settings.getNaverPage(), NaverSearch.class);
         NaverResults resultsPage = searchPage.keywordSearchBy("selenide");
