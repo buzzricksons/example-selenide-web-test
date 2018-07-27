@@ -4,8 +4,9 @@ import com.example.AbstractTests;
 import com.example.page.search.google.GoogleResults;
 import com.example.page.search.google.GoogleSearch;
 import com.example.settings.SearchSettings;
-import org.junit.Test;
+
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
