@@ -3,9 +3,10 @@ package com.example.selenium_vs_selenide;
 import com.example.AbstractTests;
 import com.example.page.search.google.GoogleResults;
 import com.example.page.search.google.GoogleSearch;
+
 import org.junit.Assert;
-import org.junit.Test;
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,7 +17,9 @@ import java.util.concurrent.TimeUnit;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.open;
 
 /**
  * Test for Example Pattern Tests by selenium and selenide.
@@ -56,7 +59,7 @@ public class PatternTests extends AbstractTests {
     }
 
     @Test
-//    @Disabled
+    @Disabled
     public void selenidePageObjectModelPattern() {
         GoogleSearch searchPage = open("http://www.google.com", GoogleSearch.class);
         GoogleResults resultPage = searchPage.keywordSearchBy("selenide");

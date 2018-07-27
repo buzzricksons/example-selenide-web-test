@@ -4,8 +4,9 @@ import com.example.AbstractTests;
 import com.example.page.search.yahoo.YahooResults;
 import com.example.page.search.yahoo.YahooSearch;
 import com.example.settings.SearchSettings;
-import org.junit.Test;
+
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
@@ -25,7 +26,7 @@ public class YahooPageTests extends AbstractTests {
      * Test for keyword "selenide".
      */
     @Test
-    @DisplayName("ヤフー検索テスト")
+    @DisplayName("ヤフー検索テスト😜")
     public void yahooSearch() {
         YahooSearch searchPage = open(settings.getYahooPage(), YahooSearch.class);
         YahooResults resultsPage = searchPage.keywordSearchBy("selenide");

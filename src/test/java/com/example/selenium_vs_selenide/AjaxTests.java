@@ -1,9 +1,10 @@
 package com.example.selenium_vs_selenide;
 
 import com.example.AbstractTests;
+
 import org.junit.Assert;
-import org.junit.Test;
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -67,7 +68,7 @@ public class AjaxTests extends AbstractTests {
     }
 
     @Test
-//    @Disabled
+    @Disabled
     public void selenideAjaxTest() {
         open("http://localhost:11080/top");
         $(By.name("time")).setValue("3");

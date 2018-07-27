@@ -2,10 +2,14 @@ package com.example.page.ajax;
 
 import com.example.AbstractTests;
 import com.example.settings.AjaxSettings;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.appear;
+import static com.codeborne.selenide.Condition.disappear;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 
 /**
@@ -23,6 +27,7 @@ public class AjaxTests extends AbstractTests {
      *
      */
     @Test
+    @Disabled
     public void testAjax() {
         AjaxSearch searchPage = open(settings.getAjaxPage(), AjaxSearch.class);
         AjaxResult resultPage = searchPage.searchBy(settings.getTime());
