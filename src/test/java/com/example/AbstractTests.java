@@ -26,7 +26,6 @@ import lombok.Getter;
  *
  */
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-//@RunWith(SpringJUnit4ClassRunner.class)
 @ExtendWith(SpringExtension.class)
 public class AbstractTests {
     /**
@@ -48,8 +47,10 @@ public class AbstractTests {
 
     /**
      * Initialize before test. This method executed only once.
+     * Because of @BeforAll need to static method, using @BeforeEach.
      *
      * @see com.codeborne.selenide.Configuration
+     * @see BeforeEach
      */
     @BeforeEach
     public void initialize() {
