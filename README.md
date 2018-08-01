@@ -9,6 +9,7 @@ Using Selenide and Spring boot.
 - Travis CI(optional)
 
 ## Test case
+Each Test cases using [Page Object Pattern](https://github.com/SeleniumHQ/selenium/wiki/PageObjects).
 - Ajax test(example web app included.)
 - Google Search test
 - Yahoo Search test
