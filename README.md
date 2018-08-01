@@ -1,10 +1,10 @@
 # Example for Selenide web test
 Using Selenide and Spring boot.
 - [Selenide](http://selenide.org/) 4.12
-- Spring Boot 2.X
+- Spring Boot 2
 - JUnit 5
 - lombok
-- JDK 1.8
+- JDK 1.9
 - [Latest Chrome(Headless mode included)](https://www.google.com/chrome/browser/desktop/index.html)
 - Travis CI(optional)
 
